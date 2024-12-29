@@ -22,40 +22,31 @@ class Admin extends DbAdmin
         $stmt->execute([$hashedPassword]);
     }
 
+
+
     public function adminLogin($InputPassword)
     {
         $sql = "SELECT password FROM admin";
         $stmt = $this->connection()->prepare($sql);
 
-
         if ($stmt->execute()) {
-            $column = $stmt->fetchAll();
-            $index = 0;
-            $flag = false;
-
-            while ($index !== count($column)) {
-                if (password_verify($InputPassword, $column[$index][0])) {
-                    echo $column[$index][0];
-                    $flag = true;
-                    break;
-                } else if ($column[$index][0] === $InputPassword) {
-                    echo $column[$index][0];
-                    $flag = true;
-                    break;
+            $column = $stmt->fetchAll(); // Fetch all rows
+            foreach ($column as $row) {
+                if ($InputPassword === $row['password']) {
+                    echo "Login successful!";
+                    return true;
                 }
-                echo $flag;
-                $index++;
             }
-            if ($flag === false) {
-                echo "Failed to find the user";
-                return $flag;
-            } else {
-                return $flag;
-            }
+
+            // If no match is found
+            echo "Failed to find the user";
+            return false;
         } else {
             echo "Failed to execute the statement";
+            return false;
         }
     }
+
 
     public function adminLogout()
     {
