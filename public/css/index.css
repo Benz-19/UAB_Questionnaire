@@ -1,0 +1,174 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'poppins';
+}
+
+header {
+    display: flex;
+    background-color: whitesmoke;
+    margin: 0 auto;
+    padding: 15px 20px;
+    position: relative;
+    top: 12px;
+    max-width: fit-content;
+    border-radius: 12px;
+    align-items: center;
+    box-shadow: 0 0 6px rgba(0, 0, 0, 0.25);
+}
+
+header .idx-logo {
+    text-align: center;
+    padding: 0 1px;
+    margin-right: 12px;
+    border-right: 3px solid black;
+}
+
+header .idx-header-det {
+    padding: 30px 0;
+}
+
+header .idx-header-det h3 {
+    color: #2181ff;
+}
+
+header .idx-header-det p {
+    overflow: hidden;
+    max-width: 100%;
+    text-overflow: ellipsis;
+}
+
+header .idx-logo .logo {
+    width: 290px;
+    height: 97px;
+}
+
+
+.idx-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+    margin: 0 20px;
+}
+
+.idx-info {
+    border-right: 1px solid rgba(0, 0, 0, 0.31);
+    border-left: 1px solid rgba(0, 0, 0, 0.31);
+    padding: 30px;
+    margin: 30px;
+}
+
+.idx-form {
+    width: 100%;
+    padding: 30px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.idx-form form {
+    width: 100%;
+    background-color: #f5f5f5;
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.25);
+    padding: 30px;
+}
+
+form input {
+    text-align: center;
+}
+
+form .idx-btn {
+    text-align: center;
+}
+
+form button {
+    margin: 14px 0;
+}
+
+.adj {
+    padding: 30px 0;
+}
+
+
+@media screen and (max-width: 740px) {
+    header {
+        display: flex;
+        flex-wrap: wrap;
+        max-width: 700px;
+    }
+
+    header .idx-logo {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        margin-right: 12px;
+        border-right: 0px;
+    }
+
+    header .idx-logo .logo {
+        width: 240px;
+        height: 79px;
+    }
+
+    .idx-info {
+        border: 0;
+        padding: 5px;
+        margin: 0px;
+    }
+}
+
+
+@media screen and (max-width: 1099px) {
+    .idx-container {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column-reverse;
+    }
+
+}
+
+@media screen and (max-width: 400px) {
+
+    header .idx-header-det h3 {
+        font-size: 15px;
+    }
+
+    header .idx-header-det p,
+    .idx-form,
+    .idx-info {
+        font-size: 10px;
+    }
+
+    .idx-container {
+        border: 0;
+        padding: 0;
+    }
+
+    .idx-form form {
+        width: 100%;
+        background-color: #f5f5f5;
+        box-shadow: 0 0 4px rgba(0, 0, 0, 0.25);
+        padding: 0px;
+    }
+}
+
+@media screen and (max-width: 350px) {
+
+    .form-row {
+        display: flex;
+        text-align: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    .idx-form form input {
+        font-size: 7px;
+    }
+
+    .idx-form form button {
+        width: 100px;
+        height: 32px;
+        font-size: 7px;
+    }
+}

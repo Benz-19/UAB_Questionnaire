@@ -1,0 +1,30 @@
+#logout {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    top: 60px;
+}
+
+#logout .idx-logo .logo {
+    width: 290px;
+    height: 97px;
+}
+
+
+@media screen and (max-width: 740px) {
+
+    #logout .idx-logo {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        margin-right: 12px;
+        border-right: 0px;
+    }
+
+    #logout .idx-logo .logo {
+        width: 240px;
+        height: 79px;
+    }
+
+}
