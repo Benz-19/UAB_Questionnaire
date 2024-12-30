@@ -9,9 +9,6 @@ if (isset($_SESSION["logged-in"]) !== true && isset($_SESSION["logout"]) === tru
     header("Location: index.php");
     exit();
 }
-$admin = new Admin();
-
-echo $admin->setStudentCode();
 ?>
 
 <!DOCTYPE html>

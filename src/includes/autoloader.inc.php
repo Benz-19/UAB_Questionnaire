@@ -10,7 +10,6 @@ function autoLoader($className)
     $baseDir = __DIR__ . "/../";
 
     $path = $baseDir . "classes/" . $className . ".class.php";
-
     if (!file_exists($path)) {
         echo $path . " File does not exists! <br>";
         return false;
