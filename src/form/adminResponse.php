@@ -41,7 +41,7 @@ if (isset($_POST["displayResponse"])) {
             }
         }
 
-        return array_values($result);
+        return array_values($result); //Returns the result
     }
 
     // Merge datasets based on student_id
